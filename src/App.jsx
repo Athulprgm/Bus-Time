@@ -43,10 +43,11 @@ busData.sort((a, b) => parseTimeStr(a.time) - parseTimeStr(b.time));
 
 const translations = {
   en: {
-    title: "Cheemeni Bus Timings",
+    title: "Libgo",
     findNext: "Select your destination",
     quickly: "Travel Smart",
-    subtitle: "Accurate schedules. Smooth journeys.",
+    subtitle: "Cheemeni Bus Timings. Accurate schedules.",
+    meaning: "Derived from 'Liberty' & 'Go' — The ultimate freedom to go anywhere, anytime.",
     from: "Departure",
     to: "Arrival",
     placeholder: "Search destination...",
@@ -66,10 +67,11 @@ const translations = {
     routeMap: "Route Stops"
   },
   ml: {
-    title: "ചീമേനി ബസ് സമയങ്ങൾ",
+    title: "Libgo",
     findNext: "യാത്ര ലക്ഷ്യസ്ഥാനം",
     quickly: "തിരഞ്ഞെടുക്കുക",
-    subtitle: "നിങ്ങളുടെ യാത്രയ്ക്കുള്ള കൃത്യമായ സമയക്രമങ്ങൾ.",
+    subtitle: "ചീമേനി ബസ് സമയങ്ങൾ. കൃത്യമായ സമയക്രമങ്ങൾ.",
+    meaning: "സ്വാതന്ത്ര്യത്തോടെ എവിടേക്കും എപ്പോഴും യാത്ര ചെയ്യാനുള്ള നിങ്ങളുടെ ലക്ഷ്യം.",
     from: "പുറപ്പെടുന്നത്",
     to: "എത്തിച്ചേരുന്നത്",
     placeholder: "സ്ഥലം തിരയുക...",
@@ -208,7 +210,7 @@ function FullScreenLoader({ t }) {
         className="text-center relative z-10"
       >
         <h2 className="text-2xl font-light text-white tracking-[0.1em] mb-8">
-          <span className="text-accent-gradient font-bold">{t.title.split(' ')[0]}</span> {t.title.split(' ').slice(1).join(' ')}
+          <span className="text-accent-gradient font-bold">{t.title}</span>
         </h2>
         
         <div className="w-48 h-[2px] bg-white/10 mx-auto relative overflow-hidden rounded-full">
@@ -219,6 +221,16 @@ function FullScreenLoader({ t }) {
             className="absolute top-0 h-full w-1/2 bg-gradient-to-r from-transparent via-[#B2DF28] to-transparent"
           />
         </div>
+
+        <motion.p 
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="text-[#94A3B8] mt-8 max-w-[250px] mx-auto text-[9px] leading-relaxed font-light tracking-widest uppercase"
+        >
+          <strong className="text-[#B2DF28] font-semibold text-[10px]">Libgo</strong> /lib·gō/<br/>
+          <span className="mt-2 block italic text-[8px] opacity-70 normal-case tracking-wide">{t.meaning}</span>
+        </motion.p>
       </motion.div>
     </motion.div>
   );
@@ -369,7 +381,7 @@ export default function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialLoading(false);
-    }, 2200); // Fast, smooth loading
+    }, 3200); // Extended slightly to allow reading the Libgo meaning
     return () => clearTimeout(timer);
   }, []);
 
@@ -415,7 +427,7 @@ export default function App() {
                 <BusFront size={18} className="text-[#B2DF28]" />
               </div>
               <h1 className="font-medium tracking-wide text-sm text-white/90">
-                <span className="font-bold text-accent-gradient">{t.title.split(' ')[0]}</span> {t.title.split(' ').slice(1).join(' ')}
+                <span className="font-bold text-accent-gradient">{t.title}</span>
               </h1>
             </div>
             
@@ -434,6 +446,27 @@ export default function App() {
 
           <main className="max-w-2xl mx-auto px-4 sm:px-6 py-8 space-y-8 relative z-10">
             
+            {/* Minimal Hero */}
+            <div className="space-y-4 pt-2 pb-2">
+              <motion.h2 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-3xl sm:text-4xl font-light text-white tracking-wide"
+              >
+                {t.findNext} <br />
+                <span className="text-accent-gradient font-medium italic">{t.quickly}</span>
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="text-white/40 text-xs sm:text-sm tracking-widest uppercase font-light"
+              >
+                {t.subtitle}
+              </motion.p>
+            </div>
+
             {/* Search & Filter Section */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
