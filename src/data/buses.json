@@ -1,0 +1,126 @@
+{
+  "startLocation": "Cheemeni",
+  "routes": [
+    {
+      "destinationSide": "Payyanur",
+      "route": [
+        "Cheemeni",
+        "Cheruvathur",
+        "Trikaripur",
+        "Payyanur"
+      ],
+      "buses": [
+        {
+          "busName": "Karippal",
+          "departureTime": "10:15 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Yathra",
+          "departureTime": "11:15 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Phoenix",
+          "departureTime": "07:20 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Leader",
+          "departureTime": "08:40 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "KSRTC Fast Passenger",
+          "departureTime": "12:45 PM",
+          "type": "KSRTC"
+        }
+      ]
+    },
+    {
+      "destinationSide": "Kanhangad",
+      "route": [
+        "Cheemeni",
+        "Nileshwar",
+        "Kanhangad"
+      ],
+      "buses": [
+        {
+          "busName": "Sreekandam",
+          "departureTime": "05:45 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "King Max",
+          "departureTime": "06:10 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Sanha",
+          "departureTime": "07:00 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Galaxy",
+          "departureTime": "08:15 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "KSRTC Ordinary",
+          "departureTime": "01:00 PM",
+          "type": "KSRTC"
+        }
+      ]
+    },
+    {
+      "destinationSide": "Kayyur",
+      "route": [
+        "Cheemeni",
+        "Kayyur",
+        "Karivellur"
+      ],
+      "buses": [
+        {
+          "busName": "Karippal",
+          "departureTime": "06:30 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Naaz",
+          "departureTime": "08:00 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Yathra",
+          "departureTime": "11:30 AM",
+          "type": "Private"
+        }
+      ]
+    },
+    {
+      "destinationSide": "Chandukkam",
+      "route": [
+        "Cheemeni",
+        "Bheemanady",
+        "Chandukkam"
+      ],
+      "buses": [
+        {
+          "busName": "KVR",
+          "departureTime": "07:15 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Sreekandam",
+          "departureTime": "08:20 AM",
+          "type": "Private"
+        },
+        {
+          "busName": "Sanha",
+          "departureTime": "05:10 PM",
+          "type": "Private"
+        }
+      ]
+    }
+  ]
+}
